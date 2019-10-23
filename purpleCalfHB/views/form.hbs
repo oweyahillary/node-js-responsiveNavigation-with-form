@@ -1,0 +1,38 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+{{>header}}
+<div class="container" style="margin-top:35px; margin-bottom:35px"> 
+<h2>Table displaying list of users</h2>
+{{error}}
+<table>
+      <tr>
+        <th>User ID</th>
+        <th>User Name</th>
+        <th>Activation</th>
+      </tr>
+{{#each items}}
+      <tr>
+        <td> {{user_id}} </td>
+        <td> {{name}} </td>
+        <td> {{activation}} </td>
+      </tr>
+{{/each}}
+  </table>
+</div>
+</div>
+{{>footer}}
